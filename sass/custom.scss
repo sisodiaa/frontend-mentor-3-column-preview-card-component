@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
+$breakpoint-mobile: 75.625em;
+
 :root {
   --color-bright-orange: hsl(31, 77%, 52%);
   --color-dark-cyan: hsl(184, 100%, 22%);
@@ -28,6 +30,12 @@ html {
 .container {
   margin: 0 auto;
   width: 80%;
+  max-width: 25rem;
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    width: 68%;
+    max-width: 75rem;
+  }
 }
 
 .cards {
@@ -37,10 +45,25 @@ html {
   margin-bottom: 5rem;
   border-radius: 0.7rem;
   overflow: hidden;
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    flex-direction: row;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 3rem 2.5rem;
+  height: 30.5rem;
+
+  @media only screen and (min-width: $breakpoint-mobile) {
+    padding: 3.5rem 4rem;
+    height: 36rem;
+  }
 
   &__heading {
     margin-top: 2rem;
@@ -54,7 +77,6 @@ html {
 
   &__paragraph {
     line-height: 1.7;
-    margin-bottom: 2rem;
   }
 
   &--sedan {
@@ -72,12 +94,13 @@ html {
 
 .button {
   font-size: 1.066rem;
-  padding: 0.7rem 1.7rem;
+  padding: 0.7rem 2rem;
   border: .3rem solid var(--color-light-gray);
   border-radius: 5rem;
   background-color: var(--color-light-gray);
   outline: none;
   cursor: pointer;
+  align-self: flex-start;
 
   &--sedan {
     color: var(--color-bright-orange);

@@ -27,6 +27,13 @@ html {
 .container {
   margin: 0 auto;
   width: 80%;
+  max-width: 25rem;
+}
+@media only screen and (min-width: 75.625em) {
+  .container {
+    width: 68%;
+    max-width: 75rem;
+  }
 }
 
 .cards {
@@ -37,9 +44,26 @@ html {
   border-radius: 0.7rem;
   overflow: hidden;
 }
+@media only screen and (min-width: 75.625em) {
+  .cards {
+    flex-direction: row;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+}
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 3rem 2.5rem;
+  height: 30.5rem;
+}
+@media only screen and (min-width: 75.625em) {
+  .card {
+    padding: 3.5rem 4rem;
+    height: 36rem;
+  }
 }
 .card__heading {
   margin-top: 2rem;
@@ -52,7 +76,6 @@ html {
 }
 .card__paragraph {
   line-height: 1.7;
-  margin-bottom: 2rem;
 }
 .card--sedan {
   background-color: var(--color-bright-orange);
@@ -66,12 +89,13 @@ html {
 
 .button {
   font-size: 1.066rem;
-  padding: 0.7rem 1.7rem;
+  padding: 0.7rem 2rem;
   border: 0.3rem solid var(--color-light-gray);
   border-radius: 5rem;
   background-color: var(--color-light-gray);
   outline: none;
   cursor: pointer;
+  align-self: flex-start;
 }
 .button--sedan {
   color: var(--color-bright-orange);
