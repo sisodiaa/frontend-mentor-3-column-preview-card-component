@@ -89,13 +89,14 @@ html {
 
 .button {
   font-size: 1.066rem;
-  padding: 0.7rem 2rem;
-  border: 0.3rem solid var(--color-light-gray);
+  padding: 0.85rem 2rem;
+  border: 0.15rem solid var(--color-light-gray);
   border-radius: 5rem;
   background-color: var(--color-light-gray);
   outline: none;
   cursor: pointer;
   align-self: flex-start;
+  transition: all 0.3s;
 }
 .button--sedan {
   color: var(--color-bright-orange);
@@ -105,6 +106,10 @@ html {
 }
 .button--luxury {
   color: var(--color-darker-cyan);
+}
+.button:hover {
+  color: var(--color-light-gray);
+  background-color: transparent;
 }
 
 .attribution {
